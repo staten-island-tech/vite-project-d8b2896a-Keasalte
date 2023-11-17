@@ -1,13 +1,7 @@
 /* make a dark + blue mode and another thats white and light blue
 
-light theme colors
-#eef3fa
-#bee0fe
-#98bffc
-#5d93fc
-#247dfc
-#085cff
 */
+
 
 body,
 html,
@@ -18,6 +12,33 @@ html,
   padding: 0px;
 }
 
+:root{
+  --lightBlue: #eef3fa;
+  --lightishBlue: #bee0fe;
+  --ligthishishBlue: #98bffc;
+  --Blue: #5d93fc;
+  --BlueBlue: #247dfc;
+  --TrueBlue: #085cff;
+  --DarkishishBlue: #7e8dca;
+  --TrueDark: #232a52;
+  --Dark: #000625;
+  --Alice: aliceblue;
+}
+
+.dark{
+  --primary: var(--DarkishishBlue);
+  --secondary: var(--TrueDark);
+  --colord: var(--Dark);
+  --text: var(--Alice);
+}
+
+.light{
+  --primary: var(--lightishBlue);
+  --secondary: var(--BlueBlue);
+  --colord: var(--lightishBlue);
+  --text: var(--Dark);
+}
+
 .app {
   display: flex;
   width: 100%;
@@ -25,33 +46,44 @@ html,
 }
 
 .Container{
-  background-color: #232a52;
+  background-color: var(--secondary);
 }
 
 .type{
-  color: aliceblue;
+  color: var(--text);
   align-items: center;
 }
 
 button {
-  color: aliceblue;
+  color: var(--text);
   letter-spacing: 0.1rem;
   width: fit-content;
-  background-color: #7e8dca;
+  background-color: var(--primary);
   margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+input {
+  color: var(--text);
+  letter-spacing: 0.1rem;
+  width: fit-content;
+  background-color: var(--primary);
+  margin: 100;
   padding: 0;
   text-decoration: none;
 }
 
 .card {
   height: auto;
-  width: 21vw;
-  background-color: #7e8dca;
+  width: 20vw;
+  color: var(--text);
+  background-color: var(--primary);
   border-radius: 25px;
   justify-content: space-between;
   text-align: center;
   display: flexbox;
-  box-shadow: 0 10px 10px #232a52 ;
+  box-shadow: 0 10px 10px var(--secondary) ;
   transition: all 1s;
 }
 
@@ -70,23 +102,23 @@ img{
 }
 
 body {
-  background-color: #000625;
+  background-color: var(--colord);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .center {
-  color: aliceblue;
+  color: var(--text);
   text-align: center;
   font-size: 45px;
 }
 
 .card-text-color {
-  color: aliceblue;
+  color: var(--text);
   display: flexbox;
 }
 
 .card-header-color {
-  color: aliceblue;
+  color: var(--text);
   display: flexbox;
   padding-top: 10px;
 }

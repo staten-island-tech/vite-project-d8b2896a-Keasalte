@@ -3,20 +3,20 @@ const charactercards = [
     name: "Archer",
     class: ["Archer","All"],
     title: "EMIYA",
-    imgURL: "https://image.myanimelist.net/ui/gDEE1QGHMmMAOJRb4Q-ehqF7ckhcVAUyzogC6VP5vLRitny3hA7sXdKvc3PctOiZkey2d4b4ZRcQi2LQcaTAPKQxYKU0sWNtAZC9ROK7u1RTuCxp6sAkVJ1ISiKl6StU",
+    imgURL: "arch.jfif",
 },
 {
     name: "Artoria Pendragon",
     class: ["Saber","All"],
     title: "King of Knights",
-    imgURL: "https://i.pinimg.com/originals/fd/99/82/fd9982745715d67b9456a7f9c28ee1b9.png",
+    imgURL: "art.png",
 },
-/* {
+ {
     name: "Gawain ",
     class: ["Saber","All"],
     title: "Knight of the Sun",
-    imgURL: "https://static.wikia.nocookie.net/typemoon/images/f/fa/SaberGawainStage3.jpg/revision/latest/scale-to-width-down/250?cb=20161203104306",
-}, */
+    imgURL: "Gawain.webp",
+}, 
 {
     name: "Gilgamesh",
     class: ["Archer","All"],
@@ -35,12 +35,12 @@ const charactercards = [
     title: "Goddess of the Underworld",
     imgURL: "https://pm1.aminoapps.com/6946/b6758c1c470e667d6bf261599c809cfa51bf2f2er1-1000-1176v2_00.jpg",
 },
-/* {
+ {
     name: "Astolfo",
     class: ["Rider","All"],
     title: "Rider of the Black faction",
-    imgURL: "https://static.wikia.nocookie.net/typemoon/images/b/b8/RiderAstolfoStage2.jpg/revision/latest/scale-to-width-down/250?cb=20180105092637",
-}, */
+    imgURL: "ast.webp",
+}, 
 {
     name: "Ivan the Terrible",
     class: ["Rider","All"],

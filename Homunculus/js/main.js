@@ -2,6 +2,17 @@ import '/styles/style.css';
 import { Dominic } from './dom';
 import {charactercards} from './cards';
 
+document.querySelector("#tmeeton").addEventListener("click", function () {
+  if (document.body.classList.contains("light")) {
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
+  }
+  else {
+    document.body.classList.add("light");
+    document.body.classList.remove("dark");
+  }
+});
+
 function cardCreator(charactercards) {
   document.querySelector(".app").insertAdjacentHTML(
     "beforeend",
@@ -13,7 +24,7 @@ function cardCreator(charactercards) {
   );
 }
 
-charactercards.forEach((take) => cardCreator(take.name, take.title, take.imgURL));
+charactercards.forEach((take) => cardCreator(take));
 
 const remove = function () {
   document.querySelectorAll(".card").forEach((card) => card.remove());
@@ -29,31 +40,20 @@ const mapData = function () {
       })
     )
 };
-const filters = {
-  All: function () {
-      Dominic.filterAll.addEventListener("click", function () {
-          remove();
-          mapData();
-          charactercards
-              .forEach((serv) => {
-                  console.log(serv.name);
-                  cardCreator(serv);
-              });
-      });
-  },
-  Sabers: function () {
-    Dominic.filterSaber.addEventListener("click", function () {
-      remove();
-      mapData();
-        charactercards
-            .filter((serv) => serv.class.includes("Saber"))
-            .forEach((serv) => {
-              console.log(serv.name);
-              cardCreator(serv);
-            });
-    });
-  },
-};
 
-filters.All();
-filters.Sabers();
+function filterAAA(klass) {Dominic[klass].addEventListener("click", function () {
+  remove();
+  mapData();
+  charactercards.filter((serv) => serv.class.includes(klass))
+  .forEach((serv) => {
+          console.log(serv.name);
+          cardCreator(serv);
+        });
+})};
+
+filterAAA("All");
+filterAAA("Saber");
+filterAAA("Lancer");
+filterAAA("Archer");
+filterAAA("Rider");
+
