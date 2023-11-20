@@ -1,4 +1,3 @@
-import '/styles/style.css';
 import { Dominic } from './dom';
 import {charactercards} from './cards';
 
