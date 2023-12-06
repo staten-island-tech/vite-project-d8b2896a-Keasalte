@@ -1,3 +1,4 @@
+
 import { Dominic } from './dom';
 import {charactercards} from './cards';
 
@@ -56,3 +57,31 @@ filterAAA("Lancer");
 filterAAA("Archer");
 filterAAA("Rider");
 
+/* 
+const filters = {
+  All: function () {
+      Dominic.filterAll.addEventListener("click", function () {
+          remove();
+          mapData();
+          charactercards
+              .forEach((serv) => {
+                  console.log(serv.name);
+                  cardCreator(serv);
+              });
+      });
+  },
+  Sabers: function () {
+    Dominic.filterSaber.addEventListener("click", function () {
+      remove();
+      mapData();
+        charactercards
+            .filter((serv) => serv.class.includes("Saber"))
+            .forEach((serv) => {
+              console.log(serv.name);
+              cardCreator(serv);
+            });
+    });
+  },
+};
+filters.All();
+filters.Sabers(); */
